@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('', [FrontController::class, 'home'])->name('home');
+
+Route::get('services', [FrontController::class, 'services'])->name('services');
+
+Route::get('about', [FrontController::class, 'about'])->name('about');
+
+Route::get('contact', [FrontController::class, 'contact'])->name('contact');
+
+Route::get('faq', [FrontController::class, 'faq'])->name('faq');
+
+Route::get('sign-up', [FrontController::class, 'signUp'])->name('sign.up');
