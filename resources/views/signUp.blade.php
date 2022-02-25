@@ -7,7 +7,7 @@
 
     <section class="mb-4">
         <div class="container">
-            <h1 class="font-weight-bold text-center my-4">Sign up</h1>
+            <h2 class="font-weight-bold text-center my-4">Sign up</h2>
             <p class="text-center w-responsive mx-auto mb-5">Sign up to our weekly newsletter about new work opportunities</p>
 
             <div class="row justify-content-center">
@@ -32,8 +32,15 @@
                             </div>
                         </div>
 
+                        <script type="text/javascript">
+                            function popUp()
+                            {
+                                alert("Subscription successful!");
+                            }
+                        </script>
+
                         <div class="text-center pt-5">
-                            <input href="sign-up/submit" class="btn btn-primary font-weight-bold btn-lg active" role="button" aria-pressed="true" style="background-color: #92adff; border: white; border-radius: 40px; min-width: 135px;" value="Subscribe" type="submit"></input>
+                            <input href="sign-up/submit" class="btn btn-primary font-weight-bold btn-lg active" role="button" aria-pressed="true" style="background-color: #92adff; border: white; border-radius: 40px; min-width: 135px;" value="Subscribe" type="submit" onclick="popUp()"></input>
                         </div>
                     </form>
 
