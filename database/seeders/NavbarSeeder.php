@@ -59,7 +59,7 @@ class NavbarSeeder extends Seeder
 
             [
                 'name' => 'Sign Up',
-                'route' => 'sign.up',
+                'route' => 'signUp',
                 'ordering' => 6,
             ]
         ];

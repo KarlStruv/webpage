@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,4 +25,6 @@ Route::get('contact', [FrontController::class, 'contact'])->name('contact');
 
 Route::get('faq', [FrontController::class, 'faq'])->name('faq');
 
-Route::get('sign-up', [FrontController::class, 'signUp'])->name('sign.up');
+Route::get('sign-up', [FrontController::class, 'signUp'])->name('signUp');
+
+Route::post('sign-up/submit', [UserController::class, 'store'])->name('signUp.submit');
