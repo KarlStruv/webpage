@@ -15,7 +15,6 @@ class UserController extends Controller
         $users->email = $request->email;
         $users->save();
 
-
         return redirect('/');
     }
 }
