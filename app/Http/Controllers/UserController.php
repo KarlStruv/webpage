@@ -13,8 +13,10 @@ class UserController extends Controller
         $users = new User;
         $users->name = $request->name;
         $users->email = $request->email;
-        $users->save();
-
-        return redirect('/');
+        if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $users->save();
+            return redirect('/');
+        }
+        else return;
     }
 }
