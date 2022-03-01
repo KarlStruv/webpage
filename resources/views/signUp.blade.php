@@ -32,13 +32,15 @@
                             </div>
                         </div>
 
+                        @if(session()->has('message'))
+                            <div class="alert-message">
+                                {{ session()->get('message') }}
+                            </div>
+                        @endif
                         <div class="text-center pt-5">
                             <input href="sign-up/submit" class="btn btn-primary font-weight-bold btn-lg active" role="button" aria-pressed="true" style="background-color: #92adff; border: white; border-radius: 40px; min-width: 135px;" value="Subscribe" type="submit"></input>
                         </div>
 
-                        <div id="error" style="color: red; font-size: 24px; display: none;">
-                            Email is invalid!
-                        </div>
                     </form>
 
 
