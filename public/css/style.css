@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji"
+}
+
+body {
+    margin: 0;
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    padding: 2% 10% 2% 10%;
+}
+
+.nav-title{
+    font-weight: bold;
+}
+
+.nav > .nav-header {
+    display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 24px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+    display: none;
+}
+
+.nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 16px;
+}
+
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 10px 12px 10px 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav > .nav-links > a:hover {
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+.nav > #nav-check {
+    display: none;
+}
+
+.signup-btn{
+    border-radius: 40px;
+    background: #d5c4ff;
+    text-align: center;
+    width: 120px;
+}
+
+@media (max-width:768px) {
+    .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .nav > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: silver;
+        height: 0;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0;
+    }
+    .nav > .nav-links > a {
+        display: block;
+        width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+        height: 0;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+        text-align: center;
+    }
+}
+
+.content{
+    padding: 2% 2% 2% 10%;
+    display: inline-flex;
+}
+
+.content-box{
+    display: flex;
+}
+
+.content-text{
+    width: 40%;
+    margin: 0;
+}
+
+.content-textbox{
+    color: #9ca3af;
+}
+
+.home-image{
+    width: 65%;
+    height: auto;
+    horiz-align: right;
+    overflow: hidden;
+    padding-top: 5%;
+}
+.header-first{
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-left: -3px;
+}
+
+.header-second{
+    font-size: 36px;
+    letter-spacing: 6px;
+    color: #ffa62e;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: -2px;
+}
+
+.learn-more-btn{
+    text-align: center;
+    background-color: #d5c4ff;
+    border-radius: 40px;
+    width: 150px;
+    padding: 13px 10px 13px 10px;
+    margin-top: 40px;
+}
+
+.learn-more-btn a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+}
+
+@media (max-width:992px) {
+    .content-box{
+        display: grid;
+        justify-items: center;
+    }
+    .content-text{
+        align-content: center;
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .learn-more-btn{
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .headers{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
